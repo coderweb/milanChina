@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.picMove {
+    margin: 50px auto 0;
+    width: 960px;
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*图片区*/
+
+.picMove .piclist {
+    position: absolute;
+    list-style-type: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.picMove .piclist li {
+    float: left;
+}
+
+.picMove .piclist li a {
+    display: block;
+    width: 960px;
+    height: 320px;
+}
+
+.picMove .piclist li a img {
+    position: relative;
+}
+
+
+/*底部按钮区*/
+
+.picMove .picbtn {
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    left: 440px;
+}
+
+.picMove .picbtn li {
+    list-style-type: none;
+    float: left;
+}
+
+.picMove .picbtn li span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 10px;
+    background: green;
+}
+
+
+/*左右切换区按钮*/
+
+.nextbtn {
+    position: absolute;
+    z-index: 2;
+    top: 160px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+}
+
+.nextbtn span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: blue;
+}
+
+.prebtn {
+    position: absolute;
+    z-index: 2;
+    top: 160px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background: greenyellow;
+}
+
+.prebtn span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: blue;
+}

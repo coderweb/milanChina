@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+            .main-wrapper {
+                width: 960px;
+                margin: 0 auto;
+            }
+            .slide-wrap {
+                height: 455px;
+                width: 960px;
+                overflow:hidden;
+                position: relative;
+            }
+            .slide-wrap .slide-list {
+                position: absolute;
+                width: 999em;
+                height:455px;
+            }
+            .slide-wrap .slide-list img {
+                float: left;
+            }
+            .slide-wrap .slide-dot {
+                position: absolute;
+                bottom: 25px;
+                right: 15px;
+            }
+            .slide-wrap .slide-dot span {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                background: url(image/spirit.png) 0 -46px no-repeat;
+                margin: 0 2px;
+                cursor: pointer;
+            }
+            .slide-wrap .slide-btn {
+                position: absolute;
+                display: block;
+                width: 24px;
+                height: 46px;
+                background: url(image/spirit.png) 0 0 no-repeat;
+                top: 220px;
+                cursor: pointer;
+                z-index: 2;
+            }
+            .slide-wrap .slide-btn.next-btn {
+                right: 15px;
+                background-position: -25px 0;
+            }
+            .slide-wrap .slide-btn.prev-btn {
+                left: 15px;
+            }
+
+            #buttons .on {
+                background-position: -9px -46px;
+            }
+        </style>
+        <script type="text/javascript">
+
+
+        window.onload = function () {
+            var container = document.getElementById('container');
+            var list = document.getElementById('list');
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var index = 1;
+            var len = 4;
+            var animated = false;
+            var interval = 3000;
+            var timer;
+
+
+            function animate (offset) {
+                if (offset == 0) {
+                    return;
+                }
+                animated = true;
+                var time = 300;
+                var inteval = 10;
+                var speed = offset/(time/inteval);
+                var left = parseInt(list.style.left) + offset;
+
+                var go = function (){
+                    if ( (speed > 0 && parseInt(list.style.left) < left) || (speed < 0 && parseInt(list.style.left) > left)) {
+                        list.style.left = parseInt(list.style.left) + speed + 'px';
+                        setTimeout(go, inteval);
+                    }
+                    else {
+                        list.style.left = left + 'px';
+                        if(left>-200){
+                            list.style.left = -960 * len + 'px';
+                        }
+                        if(left<(-960 * len)) {
+                            list.style.left = '-960px';
+                        }
+                        animated = false;
+                    }
+                }
+                go();
+            }
+
+            function showButton() {
+                for (var i = 0; i < buttons.length ; i++) {
+                    if( buttons[i].className == 'on'){
+                        buttons[i].className = '';
+                        break;
+                    }
+                }
+                buttons[index - 1].className = 'on';
+            }
+
+            function play() {
+                timer = setTimeout(function () {
+                    next.onclick();
+                    play();
+                }, interval);
+            }
+            function stop() {
+                clearTimeout(timer);
+            }
+
+            next.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                if (index == 4) {
+                    index = 1;
+                }
+                else {
+                    index += 1;
+                }
+                animate(-960);
+                showButton();
+            }
+            prev.onclick = function () {
+                if (animated) {
+                    return;
+                }
+                if (index == 1) {
+                    index = 4;
+                }
+                else {
+                    index -= 1;
+                }
+                animate(960);
+                showButton();
+            }
+
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = function () {
+                    if (animated) {
+                        return;
+                    }
+                    if(this.className == 'on') {
+                        return;
+                    }
+                    var myIndex = parseInt(this.getAttribute('index'));
+                    var offset = -960 * (myIndex - index);
+
+                    animate(offset);
+                    index = myIndex;
+                    showButton();
+                }
+            }
+
+            container.onmouseover = stop;
+            container.onmouseout = play;
+
+            play();
+
+        }
+
+        </script>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="slide-wrap" id="container">
+                <div id="list" class="slide-list" style="left:0px">
+                    <img src="image/milannews.png" alt="" />
+                    <img src="image/milannews2.png" alt="" />
+                    <img src="image/milannews3.png" alt="" />
+                    <img src="image/milannews4.png" alt="" />
+                    <img src="image/milannews.png" alt="" />
+                    <img src="image/milannews2.png" alt="" />
+                </div>
+                <div class="slide-dot" id="buttons">
+                    <span index="1"></span>
+                    <span index="2"></span>
+                    <span index="3"></span>
+                    <span index="4"></span>
+                </div>
+                <a href="javascript:;" class="slide-btn prev-btn" id="prev"></a>
+                <a href="javascript:;" class="slide-btn next-btn" id="next"></a>
+            </div>
+        </div>
+
+    </body>
+</html>

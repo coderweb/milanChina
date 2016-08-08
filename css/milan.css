@@ -1,0 +1,438 @@
+* @Author: epsilon * @Date: 2016-03-23 16:24:56 * @Last Modified by: anchen * @Last Modified time: 2016-04-07 15:16:01 */
+/*header头部区域*/
+
+.header {
+    background: #000;
+    height: 140px;
+}
+
+.main-wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header .main-wrapper {
+    height: 140px;
+    background: url(../image/header-bg.jpg) top right no-repeat;
+}
+
+.header .logo {
+    height: 140px;
+    width: 266px;
+    float: left;
+    background: url(../image/logo.png);
+}
+
+.header p {
+    float: left;
+    font-size: 16px;
+    line-height: 140px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.header .login-wrap {
+    float: right;
+    margin: 10px 30px 0 0;
+    color: #fff;
+}
+
+.header .login-wrap i {
+    display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 21px;
+    background: url(../image/user-icon.png) 0 0 no-repeat;
+}
+
+.header .login-wrap span {
+    margin: 0 4px;
+}
+
+.header .login-wrap span a {
+    color: #fff;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.header .a-area {
+    float: right;
+    margin: 40px 0 0 30px;
+    width: 400px;
+    display: block;
+    text-align: right;
+}
+
+.header .a-area .adidas {
+    margin: 0 34px 0 0;
+    display: inline-block;
+    width: 63px;
+    height: 44px;
+    background: url(../image/adidas.png) 0 2px no-repeat;
+}
+
+.header .a-area .emirates {
+    margin: 0 30px 0 0;
+    display: inline-block;
+    width: 63px;
+    height: 44px;
+    background: url(../image/emirates.png) 0 1px no-repeat;
+}
+
+
+/*导航栏*/
+
+.nav {
+    height: 47px;
+    border-bottom: 1px solid #b30a00;
+    background: url(../image/nav-bg.jpg) 0 0 repeat-x;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav ul li {
+    float: left;
+}
+
+.nav ul li a.active {
+    color: #fff;
+    background: #a48752;
+}
+
+.nav ul li a {
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav ul li a:hover {
+    color: #fff;
+    background: #a48752;
+}
+
+
+/*新闻板块*/
+
+.main-news {
+    padding-top: 20px;
+}
+
+.main-news .newstitle {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    width: 120px;
+    padding-left: 10px;
+}
+
+.main-news .news-directory {
+    height: 370px;
+}
+
+.main-news .news-directory .news-big {
+    float: left;
+    width: 480px;
+    height: 336px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.main-news .news-directory .news-big .big-title {
+    font-size: 18px;
+    color: #b49f6e;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 20px;
+}
+
+.main-news .newsscroll {
+    float: left;
+    padding-left: 10px;
+    width: 470px;
+}
+
+#milannews {
+    height: 360px;
+    overflow: hidden;
+}
+
+.newsBox li {
+    height: 111px;
+    list-style-type: none;
+    padding-top: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.newsBox li .newspic {
+    width: 155px;
+    height: 120px;
+    float: left;
+}
+
+.newsBox li .newscontent {
+    width: 300px;
+    height: 110px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.newscontent h2 a {
+    text-decoration: none;
+    color: #b49f6e;
+}
+
+.newsBox li .newscontent p {
+    padding-top: 10px;
+}
+
+.newsBox li .newscontent p a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*底部区*/
+.footer {
+    background: url(../image/qrcode-bg.jpg) top center no-repeat;
+}
+
+.footer .sponsor-wrapper {
+    border-bottom: 2px solid #c1a26b;
+}
+
+.footer .sponsor-wrapper .qrcode-list {
+    margin-bottom: 50px;
+    padding-top: 40px;
+}
+
+.footer .qrcode-list .qrcode-item.qrcode-item1 {
+    width: 312px;
+    margin-right: 60px;
+    background-image: url(../image/qrcode-player1.png);
+}
+
+.footer .qrcode-list .qrcode-item.qrcode-item2 {
+    width: 260px;
+    margin-right: 65px;
+    background-image: url(../image/qrcode-player2.png);
+}
+
+.footer .qrcode-list .qrcode-item.qrcode-item3 {
+    width: 260px;
+    background-image: url(../image/qrcode-player3.png);
+}
+
+.footer .qrcode-list .qrcode-item {
+    float: left;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    height: 170px;
+}
+
+.footer .qrcode-list .qrcode-item .qrcode-con {
+    width: 115px;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer .qrcode-list .qrcode-item .qrcode-con p {
+    text-align: center;
+    line-height: 1.8;
+}
+
+.footer .qrcode-list .qrcode-item .qrcode-con p i {
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../image/spirit-icon.png) 0 0 no-repeat;
+    margin-right: 2px;
+}
+
+.footer .qrcode-list .qrcode-item.qrcode-item1 .qrcode-con p i {
+    width: 18px;
+    height: 14px;
+    background-position: 0 0;
+}
+
+.footer .qrcode-list .qrcode-item.qrcode-item2 .qrcode-con p i {
+    width: 19px;
+    height: 14px;
+    background-position: 0 -19px;
+}
+
+.footer .qrcode-list .qrcode-item.qrcode-item3 .qrcode-con p i {
+    width: 36px;
+    height: 13px;
+    background-position: 0 -37px;
+}
+
+.footer .qrcode-list .qrcode-item .qrcode-con img {
+    display: block;
+    width: 115px;
+    height: 115px;
+    margin-top: 5px;
+}
+
+.footer .main-sponsor {
+    height: 150px;
+    background: url(../image/bottom-line.png) bottom center no-repeat;
+    padding-top: 170px;
+    padding-bottom: 30px;
+}
+
+.footer .main-sponsor img {
+    vertical-align: middle;
+    margin: 0 60px;
+    display: inline-block;
+}
+
+.footer .sponsor-list li {
+    background: url(../image/bottom-line.png) bottom center no-repeat;
+    padding: 30px;
+}
+
+.footer .sponsor-list li img.first-item {
+    margin-left: 0;
+}
+
+.footer .sponsor-list li img {
+    vertical-align: middle;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding: 20px 0 80px;
+}
+
+.footer .copyright p {
+    color: #999;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.main-content {
+    background: #b30a00;
+}
+
+.main-content .main-wrapper {
+    padding: 25px 0;
+    height: 350px;
+    background: url(../image/main-bg.png) center center no-repeat;
+}
+
+.main-content .main-wrapper .slide-wrap {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.main-content .main-wrapper .slide-wrap .slide-list {
+    position: absolute;
+    width: 999em;
+    left: 0;
+    top: 0;
+    height: 320px;
+}
+
+.main-content .main-wrapper .slide-wrap img {
+    float: left;
+}
+
+.main-content .main-wrapper .slide-wrap .slide-dot {
+    position: absolute;
+    width: 950px;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: right;
+}
+
+.main-content .main-wrapper .slide-wrap span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: url(../image/spirit.png) 0 -46px no-repeat;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.main-wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.slide-wrap {
+    height: 455px;
+    width: 960px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide-wrap .slide-list {
+    position: absolute;
+    width: 999em;
+    height: 455px;
+}
+
+.slide-wrap .slide-list img {
+    float: left;
+}
+
+.slide-wrap .slide-dot {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+}
+
+.slide-wrap .slide-dot span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: url(../image/spirit.png) 0 -46px no-repeat;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.slide-wrap .slide-btn {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 46px;
+    background: url(../image/spirit.png) 0 0 no-repeat;
+    top: 220px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.slide-wrap .slide-btn.next-btn {
+    right: 15px;
+    background-position: -25px 0;
+}
+
+.slide-wrap .slide-btn.prev-btn {
+    left: 15px;
+}
+
+#buttons .on {
+    background-position: -9px -46px;
+}
